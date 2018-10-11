@@ -84,7 +84,7 @@ class WeatherRoot(BoxLayout):
         else:
             Clock.schedule_once(lambda dt: self.show_add_location_form())
 
-    #def show_current_weather(self,location):   # recieved the self.text in the location variable, by edfault location is None
+    #def show_current_weather(self,location):   # recieved the self.text in the location variable, by default location is None
         #self.clear_widgets() # this is a kivy function in python to clear all the widgets from the screen
         #self.add_widget(Label(text = location)) # this line will print the location on the screen
         #if location is None and self.current_weather is None:
@@ -170,7 +170,7 @@ class Forecast(BoxLayout):
 
 class Weather01App(App):
     def build_config(self,config):
-        config.setdefaults('General', {'temp_type': "Metric", "forecast_range": 3})
+        config.setdefaults('General', {'temp_type': "Metric", "forecast_range": 3}) #by default temp_type is Metric and range is 3
     
     def build_settings(self,settings):
         settings.add_json_panel("Weather Settings", self.config, data="""
